@@ -1,7 +1,12 @@
 #include <stdio.h>
 
-int main(void)
+int main(int argc, char *argv[])
 {
-    printf("Привіт, С!\n");
+    if (argc != 2)
+    {
+        printf("Usage: ./hello <person_name>\n");
+        return 1;
+    }
+    printf("Привіт, %s!\n", argv[1]);
     return 0;
 }
